@@ -1,0 +1,52 @@
+.trending {
+  flex: 0.3;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.trends {
+  background-color: #16181c;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  width: 24vw;
+  margin-top: 5px;
+}
+
+.trends > h2 {
+  color: #e7e9ea;
+  font-size: 25px;
+  margin-bottom: 16px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.trendsContainer {
+  display: flex;
+  justify-content: space-between;
+  color: #676b70;
+  padding: 20px 20px;
+  transition: background 1;
+}
+.trendsContainer:hover {
+  background-color: #1e1f24;
+}
+
+.trendsContainer > .MuiSvgIcon-root {
+  color: #676b70;
+}
+
+.trend > p {
+  color: #71767b;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+}
+.trend > h3 {
+  color: #e7e9ea;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+  font-style: normal;
+}
