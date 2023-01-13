@@ -5,75 +5,7 @@
   color: white;
 }
 
-.newTweet {
-  display: flex;
-  padding: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.newTweet_avatar {
-  height: 50px !important;
-  width: 50px !important;
-  margin-right: 15px;
-}
-
-.tweet_areaContainer {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.tweet_area {
-  position: relative;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 25px;
-}
-
-.input {
-  width: 100%;
-  font-size: 1.5em;
-  color: gray;
-  font-weight: 300;
-  background: transparent;
-  outline-width: 0;
-  max-width: 40vw;
-  max-height: 15vh;
-  border: none;
-  overflow: hidden;
-}
-
-.tweet_areaBottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* border: 1px solid white; */
-  gap: 150px;
-}
-.tweet_areaIcons {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 15px;
-  color: #1d9bf0;
-}
-
-.tweet_areaBottom > Button {
-  background-color: #1a8cd9;
-  color: white;
-  padding: 10px;
-  border-radius: 100px;
-  text-align: center;
-  width: 12vh;
-  height: 45px;
-  font-size: 16px;
-}
-
-.tweet_areaButtom:hover > Button {
-  background-color: #1a8cd9;
-}
-
-.feeds > hr {
+hr {
   border: none;
   border-top: 0.1px solid rgb(54, 53, 53);
 }
@@ -93,49 +25,4 @@
   font-size: 15px;
   color: #1d9bf0;
   font-weight: 400;
-}
-.posts {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.post_buttons {
-  color: #71767b;
-  display: flex;
-  justify-content: space-between;
-}
-
-.postButton_option {
-  display: flex;
-  align-items: center;
-}
-
-.post_avatar {
-  height: 50px !important;
-  width: 50px !important;
-  margin-right: 15px;
-}
-
-.post_userInfo {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.post_userInfo > h3 {
-  font-size: 17px;
-  font-weight: 700;
-  color: #e7e9ea;
-  line-height: 20px;
-}
-.post_userInfo > span {
-  color: #71767b;
-}
-.postContent > p {
-  color: #e7e9ea;
-  font-weight: 450;
-  font-size: 17px;
-  margin-top: 2px;
 }

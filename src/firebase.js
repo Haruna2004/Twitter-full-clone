@@ -1,7 +1,6 @@
 import firebase from "firebase/compat/app";
-import db from "firebase/compat/firestore";
-import auth from "firebase/compat/auth";
-
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyD7_Dlb9pcd5--4vPEt7iZ5Ph24xZFnyhw",
   authDomain: "twitterv2-43c82.firebaseapp.com",
@@ -13,3 +12,7 @@ const firebaseConfig = {
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+export { db, auth, provider };

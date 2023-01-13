@@ -10,9 +10,12 @@ import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import PendingOutlinedIcon from "@mui/icons-material/PendingOutlined";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
 import SidebarOption from "./SidebarOption";
-import { Avatar, Button } from "@mui/material";
+import { Avatar } from "@mui/material";
+import { selectUser } from "../features/userSlice";
+import { useSelector } from "react-redux";
 
 const Sidebar = () => {
+  const user = useSelector(selectUser);
   return (
     <div className="sidebar">
       <SidebarOption Icon={HomeRoundedIcon} title="Home" />
@@ -32,10 +35,10 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar_profile">
-        <Avatar className="sidebar_avatar" />
+        <Avatar src={user.profilePic} className="sidebar_avatar" />
         <div className="sidebar_profileInfo">
-          <h4>Haruna Faruk</h4>
-          <p>@farukkHar</p>
+          <h4>{user.username}</h4>
+          <p>{user.userhandle}</p>
         </div>
         <MoreHorizOutlinedIcon />
       </div>
