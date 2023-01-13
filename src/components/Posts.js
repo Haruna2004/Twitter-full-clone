@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Post from "./Post";
 import "./Posts.css";
 import { db } from "../firebase";
+import FlipMove from "react-flip-move";
 
 const Posts = () => {
   const [tweets, setTweets] = useState([]);
@@ -19,22 +20,24 @@ const Posts = () => {
   }, []);
   return (
     <section className="posts">
-      {tweets.map(
-        ({
-          id,
-          data: { tweet, userhandle, timestamp, profilPicUrl, username },
-        }) => (
-          <Post
-            key={id}
-            id={id}
-            tweet={tweet}
-            timestamp={timestamp}
-            profilPicUrl={profilPicUrl}
-            userhandle={userhandle}
-            username={username}
-          />
-        )
-      )}
+      <FlipMove>
+        {tweets.map(
+          ({
+            id,
+            data: { tweet, userhandle, timestamp, profilePicUrl, username },
+          }) => (
+            <Post
+              key={id}
+              id={id}
+              tweet={tweet}
+              timestamp={timestamp}
+              profilePicUrl={profilePicUrl}
+              userhandle={userhandle}
+              username={username}
+            />
+          )
+        )}
+      </FlipMove>
     </section>
   );
 };

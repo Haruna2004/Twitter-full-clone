@@ -11,10 +11,11 @@ import PendingOutlinedIcon from "@mui/icons-material/PendingOutlined";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
 import SidebarOption from "./SidebarOption";
 import { Avatar } from "@mui/material";
-import { selectUser } from "../features/userSlice";
-import { useSelector } from "react-redux";
+import { logout, selectUser } from "../features/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
   const user = useSelector(selectUser);
   return (
     <div className="sidebar">
@@ -35,7 +36,11 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar_profile">
-        <Avatar src={user.profilePic} className="sidebar_avatar" />
+        <Avatar
+          src={user.profilePic}
+          className="sidebar_avatar"
+          onClick={() => dispatch(logout())}
+        />
         <div className="sidebar_profileInfo">
           <h4>{user.username}</h4>
           <p>{user.userhandle}</p>

@@ -9,8 +9,11 @@ import SentimentSatisfiedAltOutlinedIcon from "@mui/icons-material/SentimentSati
 import PendingActionsOutlinedIcon from "@mui/icons-material/PendingActionsOutlined";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import "./NewTweet.css";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
 
 const NewTweet = () => {
+  const user = useSelector(selectUser);
   const [textInput, setTextInput] = useState("");
   const postTweet = (e) => {
     e.preventDefault();
@@ -18,17 +21,17 @@ const NewTweet = () => {
       return;
     }
     db.collection("tweets").add({
-      username: "Haruna Faruk",
-      userhandle: "@haruna",
+      username: user.username,
+      userhandle: user.userhandle,
       tweet: textInput,
-      profilePicUrl: "MySelf.jpg",
+      profilePicUrl: user.profilePic,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
     setTextInput("");
   };
   return (
     <div className="newTweet">
-      <Avatar className="newTweet_avatar" />
+      <Avatar src={user.profilePic} className="newTweet_avatar" />
 
       <form onSubmit={postTweet}>
         <div className="tweet_areaContainer">
