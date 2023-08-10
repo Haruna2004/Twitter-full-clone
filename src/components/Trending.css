@@ -50,3 +50,9 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@media (max-width: 1289px) {
+  .trending {
+    display: none;
+  }
+}

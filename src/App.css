@@ -19,3 +19,12 @@
 .line2 {
   left: 70%;
 }
+
+@media (max-width: 1289px) {
+  .line2 {
+    display: none;
+  }
+  .line {
+    height: 100vh;
+  }
+}

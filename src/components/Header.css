@@ -58,3 +58,12 @@
   width: 100%;
   font-size: 1.1em;
 }
+
+@media (max-width: 1289px) {
+  .header_middle {
+    flex: 0.8;
+  }
+  .header_right {
+    display: none;
+  }
+}

@@ -34,3 +34,13 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+@media (max-width: 1289px) {
+  .sidebar_profile {
+    display: none;
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

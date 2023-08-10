@@ -19,3 +19,9 @@
   font-weight: 400 !important;
   margin-right: 10px;
 }
+
+@media (max-width: 1289px) {
+  .sidebarOption > h2 {
+    display: none;
+  }
+}
